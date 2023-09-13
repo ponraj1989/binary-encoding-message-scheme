@@ -1,0 +1,60 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Sinch Test
+  description: Sinch Test API Docs
+servers:
+  - url: http://localhost:3000
+components:
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: apikey
+paths:
+  /encode:
+    post:
+      summary: Encode a message
+      tags:
+        - Encode
+      security:
+        - apiKeyAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: string
+      responses:
+        200:
+          description: Successfully encoded 
+        400:
+          description: Failed to encode
+        401:
+          description: Not authenticated
+  /decode:
+    post:
+      summary: decode a message
+      tags:
+        - Decode
+      security:
+        - apiKeyAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: string
+      responses:
+        200:
+          description: Successfully decoded 
+        400:
+          description: Failed to decode
+        401:
+          description: Not authenticated
