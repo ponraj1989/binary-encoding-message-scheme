@@ -24,7 +24,9 @@ Navigate to `http://localhost:3000`
 
 - API Document endpoints
 
-  swagger Spec Endpoint : http://localhost:3000/apidocs  
+  swagger Spec Endpoint : http://localhost:3000/apidocs
+  API Testing can be done here.
+  Add the apikey(added in env file) as header by clicking the lock symbol on right top
 
 # TypeScript + Node 
 The main purpose of this project is to Design and Implement a Simple Binary Message Encoding Scheme. The Rest APIs will be using the Swagger (OpenAPI) Specification.
@@ -51,19 +53,16 @@ The test is written in Jest. test file is available under the folder "test"
 
 ```
 "jest": "29.7.0" 
-
 ```
 
 ### Running tests using NPM Scripts
 ````
 npm run test
-
 ````
 
 ### Running code coverage using NPM Scripts
 ````
 npm run test:coverage
-
 ````
 
 - creates a folder coverage with code coverage related information ready to be viewed in browser
@@ -73,7 +72,6 @@ npm run test:coverage
 ````
 cd coverage/lcov-report
 serve
-
 ````
 
 # Swagger
